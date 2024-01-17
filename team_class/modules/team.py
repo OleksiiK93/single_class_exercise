@@ -7,12 +7,9 @@ class Team:
 
     def add_player(self, new_player):
         self.players.append(new_player)
-
-    def has_player(self, players_name):
-        if players_name in self.players:
-            return True
-        else:
-            return False
+        
+    def has_player(self, player):
+        return self.players.count(player) > 0
         
     def play_game(self, won):
         if won:
